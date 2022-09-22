@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_after">
+        <observer name="place_order_after" instance="Abhay\CustomShipping\Observer\Orderplaceafter"/>
+    </event>
+    <event name="email_order_set_template_vars_before">
+        <observer name="email_template_variable_set" instance="Abhay\CustomShipping\Observer\AddCustomShippingVariable" />
+    </event>
+</config>
