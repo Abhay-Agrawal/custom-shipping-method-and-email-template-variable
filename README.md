@@ -23,4 +23,12 @@ We will notify you when your order is ready for pickup. You can pickup your orde
 And Email tempalte will be 
 
 <img width="959" alt="image" src="https://user-images.githubusercontent.com/39663362/191715405-d1818b63-49c4-4e95-b8f8-0edc88332cb3.png">
-
+                    <td class="address-details">
+                        {{if order_data.customshipping}}
+                            <h3>{{trans "PickUp Info"}}</h3>
+                            <p>{{var order_data.customshipping|raw}}</p>
+                        {{else}}
+                            <h3>{{trans "Shipping Info"}}</h3>
+                            <p>{{var formattedShippingAddress|raw}}</p>
+                        {{/if}}  
+                    </td>
